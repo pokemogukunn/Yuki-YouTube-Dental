@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: yukican
+    name: web-denaku
     env: python
     region: Oregon
     plan: free
