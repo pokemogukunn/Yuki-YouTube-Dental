@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Check</title>
+    <title>ブロックするならパスワード入れろ</title>
     <style>
         #passwordForm {
             display: none;
@@ -19,8 +19,8 @@
             var errorMessage = document.getElementById("errorMessage");
 
             if (inputPassword === correctPassword) {
-                // パスワードが正しい場合、success.htmlにリダイレクトします。
-                window.location.href = "success.html";
+                document.getElementById("passwordForm").style.display = "none";
+                window.location.href = "templates/home.html"; // 正しいパスワードが入力された場合にリダイレクト
             } else {
                 errorMessage.textContent = "パスワードが違います。もう一度入力してください。";
             }
@@ -33,7 +33,7 @@
 </head>
 <body>
     <div id="passwordForm">
-        <h2>パスワードを入力してください:</h2>
+        <h2>8パスワード5を1入力して7ください5:</h2>
         <input type="password" id="password">
         <button onclick="checkPassword()">送信</button>
         <p id="errorMessage"></p>
